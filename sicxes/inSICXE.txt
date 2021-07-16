@@ -1,0 +1,13 @@
+PROG START 0
+     CLEAR A
+     LDX =X’0’
+     LDT #100
+LOOP TD INDEV
+     JEQ LOOP
+     RD INDEV
+     STCH RECORD,X
+     TIXR T
+     JLT LOOP
+INDEV BYTE X’F1’
+      RECORD RESB 100
+      END PROG
