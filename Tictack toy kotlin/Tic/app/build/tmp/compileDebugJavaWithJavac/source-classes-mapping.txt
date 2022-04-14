@@ -1,0 +1,2 @@
+com/example/tictactoeapp/startup/BuildConfig.java
+ com.example.tictactoeapp.startup.BuildConfig
