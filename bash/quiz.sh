@@ -1,0 +1,26 @@
+#!/bin/sh
+mkdir home
+cd home/
+mkdir name
+cd name/
+mkdir fouda
+cd fouda/
+mkdir tarek
+cd tarek/
+mkdir sarah
+cd ..
+cd ..
+cd ..
+mkdir courses
+cd courses/
+mkdir os
+touch markes.txt
+cd os/
+mkdir hci
+touch markes.txt
+cd hci/
+mkdir numerical
+touch markes.txt
+cd numerical
+mkdir algorithms 
+touch markes.txt
