@@ -1,0 +1,12 @@
+START,LOAD A 
+      ADD B
+      STORE D
+      CLEAR 
+      OUTPUT
+      ADDI D
+      STORE B
+      HALT
+A, HEX 00FC
+B, DEC 15 
+C, HEX 0108
+D, HEX 0000

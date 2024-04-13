@@ -1,0 +1,51 @@
+     Assembly listing for: FOR LOOP.mas
+                Assembled: Wed Apr 08 13:32:31 EET 2020
+
+000 A000 |         CLEAR             
+001 2016 |         STORE SUM         
+002 5000 |         INPUT             
+003 2017 |         STORE COUNT       
+004 1019 |         LOAD ONE          
+005 201A |         STORE I           
+006 101A |  LOOP   LOAD I            
+007 4017 |         SUBT COUNT        
+008 8000 |         SKIPCOND 000      
+009 9??? |         JUMP ENDLOOP      
+   **** Operand undefined.
+00A 5000 |         INPUT             
+00B 2018 |         STORE X           
+00C 1016 |         LOAD SUM          
+00D 3018 |         ADD X             
+00E 2016 |         STORE SUM         
+00F 101A |         LOAD I            
+010 3019 |         ADD ONE           
+011 201A |         STORE I           
+012 9006 |         JUMP LOOP         
+013 ???? |         ENDLOOP ,LOAD     
+   **** Instruction not recognized.
+   **** Operand undefined.
+014 6000 |         OUTPUT            
+015 7000 |         HALT              
+         |                          
+         |                          
+016 0000 |  SUM    DEC 0             
+017 0000 |  COUNT  DEC 0             
+018 0000 |  X      DEC 0             
+019 0001 |  ONE    DEC 1             
+01A 0000 |  I      DEC 0             
+
+3 errors found.  Assembly unsuccessful.
+
+         SYMBOL TABLE
+         --------------------------------------------------
+          Symbol | Defined | References 
+         --------+---------+-------------------------------
+          COUNT  |   017   | 003, 007
+          I      |   01A   | 005, 006, 00F, 011
+          LOOP   |   006   | 012
+          ONE    |   019   | 004, 010
+          SUM    |   016   | 001, 00C, 00E
+          X      |   018   | 00B, 00D
+         --------------------------------------------------
+
+

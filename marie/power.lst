@@ -1,0 +1,61 @@
+     Assembly listing for: power.mas
+                Assembled: Tue Apr 14 07:44:38 EET 2020
+
+         |         ORG 100           
+         |                          
+100 5000 |         INPUT             
+101 2117 |         STORE Int1        
+         |                          
+102 5000 |         INPUT             
+103 2118 |         STORE Int2        
+         |                          
+104 0108 |         JNS prod          
+105 211C |         STORE answer      
+         |                          
+106 6000 |         OUTPUT            
+107 7000 |         HALT              
+         |                          
+108 0000 |  prod   HEX 0             
+         |                          
+109 1118 |         LOAD Int2         
+10A 211A |         STORE Ctr         
+10B A000 |         CLEAR             
+         |                          
+10C 2119 |         STORE Sum         
+10D 1119 |  Loop   LOAD Sum          
+10E 3117 |         ADD Int1          
+10F 2119 |         STORE Sum         
+110 111A |         LOAD Ctr          
+111 411B |         SUBT One          
+112 211A |         STORE Ctr         
+         |                          
+113 8400 |         SKIPCOND 400      
+114 910D |         JUMP Loop         
+115 1119 |         LOAD Sum          
+116 C108 |         JUMPI prod        
+         |                          
+         |                          
+117 0000 |  Int1   DEC 0             
+118 0000 |  Int2   DEC 0             
+119 0000 |  Sum    DEC 0             
+11A 0000 |  Ctr    HEX 0             
+11B 0001 |  One    DEC 1             
+11C 0000 |  answer DEC 0             
+
+Assembly successful.
+
+         SYMBOL TABLE
+         --------------------------------------------------
+          Symbol | Defined | References 
+         --------+---------+-------------------------------
+          Ctr    |   11A   | 10A, 110, 112
+          Int1   |   117   | 101, 10E
+          Int2   |   118   | 103, 109
+          Loop   |   10D   | 114
+          One    |   11B   | 111
+          Sum    |   119   | 10C, 10D, 10F, 115
+          answer |   11C   | 105
+          prod   |   108   | 104, 116
+         --------------------------------------------------
+
+

@@ -1,0 +1,40 @@
+     Assembly listing for: POWERDC.mas
+                Assembled: Tue Apr 14 08:18:29 EET 2020
+
+         |          ORG 100            
+100 1111 |          LOAD One           
+101 2110 |          STORE X            
+102 1110 |  Loop    LOAD X             
+103 4112 |          SUBT Ten           
+104 8000 |          SKIPCOND 000       
+105 910C |          JUMP Endloop       
+106 3110 |          ADD X              
+107 210F |          STORE Sum          
+108 1110 |          LOAD X             
+109 3111 |          ADD One            
+10A 2110 |          STORE X            
+10B 9102 |          JUMP Loop          
+10C 110F |  Endloop LOAD Sum           
+10D 6000 |          OUTPUT             
+10E 7000 |          HALT               
+10F 0000 |  Sum     DEC 0              
+110 0000 |  X       DEC 0              
+111 0001 |  One     DEC 1              
+112 000A |  Ten     DEC 10             
+         |          END                
+
+Assembly successful.
+
+         SYMBOL TABLE
+         ---------------------------------------------------
+          Symbol  | Defined | References 
+         ---------+---------+-------------------------------
+          Endloop |   10C   | 105
+          Loop    |   102   | 10B
+          One     |   111   | 100, 109
+          Sum     |   10F   | 107, 10C
+          Ten     |   112   | 103
+          X       |   110   | 101, 102, 106, 108, 10A
+         ---------------------------------------------------
+
+

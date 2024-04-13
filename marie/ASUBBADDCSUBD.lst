@@ -1,0 +1,47 @@
+     Assembly listing for: ASUBBADDCSUBD.mas
+                Assembled: Wed Apr 08 12:48:47 EET 2020
+
+000 5000 |         INPUT             
+001 2012 |         STORE A           
+002 5000 |         INPUT             
+003 2013 |         STORE B           
+004 5000 |         INPUT             
+005 2014 |         STORE C           
+006 5000 |         INPUT             
+007 2015 |         STORE D           
+008 1012 |         LOAD A            
+009 4013 |         SUBT B            
+00A 2016 |         STORE Z           
+00B 1014 |         LOAD C            
+00C 4015 |         SUBT D            
+00D 2017 |         STORE X           
+00E 1016 |         LOAD Z            
+00F 3017 |         ADD X             
+010 2018 |         STORE Q           
+011 6000 |         OUTPUT            
+         |                          
+         |                          
+012 0000 |  A      DEC 0             
+013 0000 |  B      DEC 0             
+014 0000 |  C      DEC 0             
+015 0000 |  D      DEC 0             
+016 0000 |  Z      DEC 0             
+017 0000 |  X      DEC 0             
+018 0000 |  Q      DEC 0             
+
+Assembly successful.
+
+         SYMBOL TABLE
+         --------------------------------------------------
+          Symbol | Defined | References 
+         --------+---------+-------------------------------
+          A      |   012   | 001, 008
+          B      |   013   | 003, 009
+          C      |   014   | 005, 00B
+          D      |   015   | 007, 00C
+          Q      |   018   | 010
+          X      |   017   | 00D, 00F
+          Z      |   016   | 00A, 00E
+         --------------------------------------------------
+
+

@@ -1,0 +1,40 @@
+org 100     
+
+input       
+Store Int1  
+
+input       
+Store Int2  
+
+Jns prod    
+Store answer
+
+Output
+Halt
+
+prod,    Hex 0  
+
+Load Int2   
+Store Ctr   
+Clear       
+
+Store Sum
+Loop,   Load Sum    
+Add Int1        
+Store Sum       
+Load Ctr        
+Subt One        
+Store Ctr       
+
+Skipcond 400        
+Jump Loop       
+Load Sum        
+JumpI prod      
+
+
+Int1,   Dec 0
+Int2,   Dec 0
+Sum,    Dec 0
+Ctr,    Hex 0
+One,    Dec 1
+answer, Dec 0

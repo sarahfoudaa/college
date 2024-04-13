@@ -1,0 +1,10 @@
+ ------------------
+ Symbol  | Location
+ --------+---------
+ Endloop |   10C
+ Loop    |   102
+ One     |   111
+ Sum     |   10F
+ Ten     |   112
+ X       |   110
+

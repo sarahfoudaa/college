@@ -1,0 +1,27 @@
+input 
+store A
+input 
+store B 
+input 
+store C
+input 
+store D
+load A
+subt B 
+store Z
+load C 
+subt D 
+store X
+load Z
+add X
+store Q
+output
+
+
+A, DEC 0
+B, DEC 0
+C, DEC 0
+D, DEC 0
+Z, DEC 0
+X, DEC 0
+Q, DEC 0

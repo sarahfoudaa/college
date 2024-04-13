@@ -1,0 +1,21 @@
+ORG 100
+Load One
+Store X
+Loop, Load X
+Subt Ten
+SkipCond 000
+Jump Endloop
+Add X
+Store Sum
+Load X
+Add One
+Store X
+Jump Loop
+Endloop, Load Sum
+Output
+Halt
+Sum, Dec 0
+X, Dec 0
+One, Dec 1
+Ten, Dec 10
+END
